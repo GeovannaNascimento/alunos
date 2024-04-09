@@ -1,0 +1,9 @@
+SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND PrimeiroNome NOT IN ('Geovanna') AND PrimeiroNome LIKE '%c%'; 
+SELECT MIN(Idade) FROM `Alunos` WHERE PrimeiroNome NOT IN ('Geovanna') AND PrimeiroNome LIKE '%f%';
+SELECT MAX(Idade) FROM `Alunos` WHERE SEXO = 'FEM' AND Nome NOT IN ('Geovanna') AND PrimeiroNome LIKE 'g%';
+SELECT MIN(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND Nome NOT IN ('Geovanna') AND PrimeiroNome LIKE 'r%';
+
+SELECT (SELECT SUM(IdadeMax) FROM (SELECT MAX(Idade)
+AS IdadeMax FROM `Alunos` WHERE PrimeiroNome NOT IN ('Geovanna') GROUP BY PrimeiroNome) AS IdadesMaximas) AS SOMA_MAX_IDADE, (SELECT SUM(IdadeMin) FROM (SELECT MIN(Idade) AS IdadeMin FROM `Alunos` WHERE PrimeiroNome NOT IN ('Lívia') GROUP BY PrimeiroNome) AS IdadesMinimas) AS SOMA_MIN_IDADE;
+
+SELECT * FROM `Alunos` WHERE SEXO = 'FEM' AND PrimeiroNome LIKE '%a%';
