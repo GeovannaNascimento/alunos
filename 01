@@ -1,0 +1,22 @@
+Média idade
+SELECT AVG (Idade) AS média_idade FROM `Alunos` WHERE 1;
+
+
+Soma idade
+SELECT SUM(Idade) AS média_idade FROM `Alunos` WHERE 1;
+
+
+Média idade alunas
+SELECT AVG (Idade) FROM `Alunos` WHERE Gênero = “F”;
+
+
+Média idade alunos
+SELECT AVG (Idade) FROM `Alunos` WHERE Gênero = “M”;
+
+
+Média idade alunas
+SELECT SUM(Idade) FROM `Alunos` WHERE Gênero = “F”;
+
+
+Média idade alunos
+SELECT SUM(Idade) FROM `Alunos` WHERE Gênero = “M”;
