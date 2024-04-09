@@ -1,0 +1,17 @@
+Média idade alunos que tem a letra “b” no nome
+SELECT AVG (Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND PrimeiroNome LIKE '%B%';
+
+Soma idade alunas e alunos que tem letra “s” no nome
+SELECT SUM(Idade) FROM `Alunos` WHERE PrimeiroNome LIKE '%S%';
+
+Média idade alunas com nomes iniciados em “I”
+SELECT AVG (Idade) FROM `Alunos` WHERE SEXO = 'FEM'AND PrimeiroNome LIKE 'I%';
+
+Média idade alunos com nomes iniciados em “G”
+SELECT AVG (Idade) FROM `Alunos` WHERE  SEXO = 'MASC' AND PrimeiroNome LIKE 'G%';
+
+Soma idade alunas que tem “a” no nome
+SELECT SUM(Idade) FROM `Alunos` WHERE SEXO = 'FEM' AND PrimeiroNome LIKE '%A%';
+
+Soma idade alunos que tem “f” no nome
+SELECT SUM(Idade) FROM `Alunos` WHERE SEXO = 'MASC' AND PrimeiroNome LIKE '%F%';
